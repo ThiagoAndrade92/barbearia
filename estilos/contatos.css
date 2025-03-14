@@ -1,0 +1,145 @@
+/* GERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none !important;
+    list-style: none !important;
+    background-color: #000;
+    color: #fff;
+}
+/*---------------------------------------------------*/
+/* HEADER */
+.header {
+    border-bottom:2px solid gold;
+}
+
+.logo {
+    width: 70px;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.nav > ul >li > a {
+    color: #fff;
+    font-size: 18px;
+}
+
+body {
+    overflow-y: scroll;
+}
+/*---------------------------------------------------*/
+/* CONTATOS */
+.contatos {
+    height: 88vh;
+}
+
+.whatsapp,
+.instagram,
+.fixo {
+    border: 1px solid gold;
+    height: 200px;
+    width: 80%;
+}
+
+.img-contato {
+    width: 50px;
+}
+
+.instagram .img-contato {
+    width: 80px;
+}
+
+.img-contato img {
+    width: 100%;
+}
+
+/*---------------------------------------------------*/
+/* FOOTER */
+.footer {
+    border-top: 1px solid gold;
+
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+footer p {
+    font-size: 10px;
+    color: darkgray;
+}
+
+.direitos {
+    font-size: 18px;
+}
+/*---------------------------------------------------*/
+/* MOBILE */
+@media (max-width: 767px) {
+     /* HEADER */
+     .menu-hamburger {
+        height: 50px;
+        width: 50px;
+        border: 1px solid #fff;
+    }
+
+    [class^=line] {
+        height: 3px;
+        width: 40px;
+        background-color: #fff;
+        margin-bottom: 10px;
+
+        transition: .2s ease-in-out;
+    }
+
+    .line1 {
+        margin-top: 5px;
+    }
+
+    .line1.active {
+        transform: rotate(45deg);
+        position: relative;
+        top: 10px;
+    }
+
+    .line2.active {
+        display: none;
+    }
+
+    .line3.active {
+        transform: rotate(-45deg);
+        position: relative;
+        top: -2px;
+    }
+
+    .nav-mobile {
+        position: absolute;
+        right: 0px;
+        top: 72.4px;
+
+        height: 30%;
+        width: 0%;
+        transition: .5s ease-in-out;
+    }
+
+    .nav-mobile.active {
+        width: 30%;
+    }
+
+    .nav-mobile>ul>li>a {
+        color: #fff;
+        font-size: 18px;
+    }
+
+/*---------------------------------------------------*/
+    .contatos {
+        height: auto;
+    }
+
+    .footer {
+        position: inherit;
+    }
+}
