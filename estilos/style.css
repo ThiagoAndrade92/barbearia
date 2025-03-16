@@ -82,7 +82,7 @@
 /*---------------------------------------------------*/
 /* FEEDBACK */
 .feedback {
-    border: 2px solid darkgray;
+    /* border: 2px solid darkgray; */
     height: 200px;
     width: 300px;
     border-radius: 20px;
