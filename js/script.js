@@ -12,11 +12,11 @@ let boxFeedback = [];
 document.addEventListener("DOMContentLoaded", () => {
     const feedbacksSalvos = localStorage.getItem('feedbacks');
     if (feedbacksSalvos) {
-        boxFeedback = JSON.parse(feedbacksSalvos); // Converte de volta para array
+        boxFeedback = JSON.parse(feedbacksSalvos);
         boxFeedback.forEach(feedback => {
-            adicionarComentario(feedback); // Renderiza os feedbacks salvos
+            adicionarComentario(feedback); 
         });
-        adicionarEventosDeRemocao(); // Adiciona os eventos de remoção aos feedbacks carregados
+        adicionarEventosDeRemocao(); 
     }
 });
 
@@ -47,7 +47,7 @@ btnEnviar.addEventListener('click', (e) => {
     const feedbackObj = {
         nome: inputName.value.trim(),
         opiniao: opiniao.value.trim(),
-        data: new Date().toLocaleString("pt-BR") // Adiciona data e hora
+        data: new Date().toLocaleString("pt-BR")
     };
 
     inputName.value = "";
@@ -73,19 +73,19 @@ const adicionarComentario = (feedbackObj) => {
     novoFeedback.innerHTML = `
         <div class="cliente d-flex align-items-center justify-content-between">
             <p class="autor">${feedbackObj.nome}</p>
-            <p class="eliminar" title="Apagar comentário" style="cursor: pointer;">X</p>
+            <p class="eliminar" title="Apagar comentário" aria-label="excluir comentário">X</p>
         </div>
         <h3 class="align-self-start mb-4">
             &#10077 <span class="coment text-center">${feedbackObj.opiniao}</span> &#10078
         </h3>
         <p class="data">${feedbackObj.data}</p>
     `;
-    feedback.prepend(novoFeedback); // Adiciona o mais recente no topo
+    feedback.prepend(novoFeedback);
 };
 
 // Função para salvar feedbacks no localStorage
 const salvarFeedbacks = () => {
-    localStorage.setItem('feedbacks', JSON.stringify(boxFeedback)); // Converte o array para string
+    localStorage.setItem('feedbacks', JSON.stringify(boxFeedback)); 
 };
 
 // Função para adicionar eventos de remoção
@@ -94,11 +94,11 @@ const adicionarEventosDeRemocao = () => {
     botoesApagar.forEach((botao, index) => {
         botao.addEventListener('click', () => {
             // Remover o feedback do DOM
-            const pai = botao.parentElement.parentElement; // Localiza o elemento pai
+            const pai = botao.parentElement.parentElement; 
             pai.remove();
 
             // Remover o feedback do array
-            boxFeedback.splice(boxFeedback.length - index - 1, 1); // Remove o feedback correspondente
+            boxFeedback.splice(boxFeedback.length - index - 1, 1);
 
             // Atualizar o localStorage
             salvarFeedbacks();
@@ -120,7 +120,7 @@ document.querySelectorAll(".nome, .txt-area").forEach(function (elemento) {
 document.querySelectorAll(".nome, .txt-area").forEach((campo) => {
     campo.addEventListener("keypress", (e) => {
         if (e.key === "Enter") {
-            e.preventDefault(); // Evita quebra de linha no textarea
+            e.preventDefault(); 
             btnEnviar.click();
         }
     });
