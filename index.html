@@ -104,24 +104,21 @@
 
             <h1 class="feedback-clientes text-center mb-5">Feedback Clientes</h1>
 
-            <div class="row align-items-center justify-content-center">
+            <div class="pb-1 d-flex align-items-center justify-content-center flex-column">
 
-                <div class="feedback p3 col-12 col-sm-5 col-md-5 col-lg-4 mx-2 my-2">
-                    <div>
-                        &#10077 <h3 class="text-center">Ótimo atendimento, trabalho impecavel</h3> &#10078
-                    </div>
-                </div>
-                <div class="feedback p3 col-12 col-sm-5 col-md-5 col-lg-3 mx-2 my-2">
-                    <h3 class="text-center">
-                        &#10077 Sem duvidas os melhores &#10078
-                    </h3>
+                <div class="caixa-de-comentarios ">
+                    <div class="inputs d-flex flex-column align-items-center">
+                        <label for="nome" class="align-self-start">Nome:</label>
+                        <input type="text" id="nome" class="nome mb-2 p-1">
+                        <textarea id="opiniao" rows="4" cols="23" placeholder="Deixe sua opinião" class="txt-area mb-2 p-1"></textarea>
+
+                        <button id="enviar" class="enviar py-1 px-2">Enviar</button>
+                    </div>   
                 </div>
 
-                <div class="feedback p3 col-12 col-sm-5 col-md-5 col-lg-3 mx-2 my-2">
-                    <h3 class="text-center">
-                        &#10077 Já marquei para voltar semana que vem &#10078
-                    </h3>
-                </div>
+                <div class="box-feedback">
+
+                </div><!-- box-feedback -->
 
             </div><!-- row -->
 

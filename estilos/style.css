@@ -81,10 +81,10 @@
 
 /*---------------------------------------------------*/
 /* FEEDBACK */
-.feedback {
-    /* border: 2px solid darkgray; */
-    height: 200px;
-    width: 300px;
+.feedback-list {
+    border: 2px solid darkgray;
+    height: auto;
+    width: 400px;
     border-radius: 20px;
 
     display: flex;
@@ -92,10 +92,81 @@
     align-items: center;
 }
 
+.box-feedback {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+/* Customizando o trilho da barra */
+.box-feedback::-webkit-scrollbar {
+    width: 10px; /* Largura da barra */
+  }
+  
+  /* Estilo do trilho */
+  .box-feedback::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Cor do trilho */
+  }
+  
+  /* Estilo do polegar */
+  .box-feedback::-webkit-scrollbar-thumb {
+    background: #272626; /* Cor do polegar */
+    border-radius: 5px; /* Cantos arredondados */
+    cursor: grab;
+  }
+
+  .box-feedback::-webkit-scrollbar-thumb:active {
+    cursor: grabbing;
+  }
+  
+  /* Efeito ao passar o mouse */
+  .box-feedback::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
 .feedback-clientes {
     font-size: 60;
     font-weight: 600;
     color: goldenrod;
+}
+
+.cliente {
+    width: 100%;
+}
+
+.eliminar {
+    color: red;
+    cursor: pointer;
+}
+
+.autor {
+    color: goldenrod;
+}
+
+.nome {
+    width: 100%;
+    outline: none;
+    border: 1px solid gold;
+}
+
+.txt-area {
+    width: 100%;
+    outline: none;
+    border: 1px solid gold;
+}
+
+.enviar {
+    color: #000;
+    background-color: gold;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .3s ease-out;
+}
+
+.enviar:hover {
+    background-color: goldenrod;
+    color: #fff;
 }
 
 /*---------------------------------------------------*/
