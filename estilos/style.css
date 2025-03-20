@@ -10,10 +10,6 @@
     color: #fff;
 }
 
-body {
-overflow-x: hidden !important;
-}
-
 /*---------------------------------------------------*/
 /* HEADER */
 .header {
@@ -261,7 +257,7 @@ footer p {
         top: 72.4px;
 
         height: 30%;
-        width: 0%;
+        width: 0;
         transition: .5s ease-in-out;
     }
 

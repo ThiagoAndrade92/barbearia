@@ -31,10 +31,6 @@ body {
     color: #fff;
     font-size: 18px;
 }
-
-body {
-    overflow-y: scroll;
-}
 /*---------------------------------------------------*/
 /* CONTATOS */
 .whatsapp,
@@ -121,7 +117,7 @@ footer p {
         top: 72.4px;
 
         height: 30%;
-        width: 0%;
+        width: 0;
         transition: .5s ease-in-out;
     }
 
@@ -135,9 +131,7 @@ footer p {
     }
 
 /*---------------------------------------------------*/
-    .contatos {
-        height: auto;
-    }
+    
 
     .footer {
         position: inherit;
