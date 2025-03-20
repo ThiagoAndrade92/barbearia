@@ -252,6 +252,7 @@ footer p {
     }
 
     .nav-mobile {
+        overflow-x: hidden;
         position: absolute;
         right: 0px;
         top: 72.4px;
