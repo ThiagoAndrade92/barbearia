@@ -9,6 +9,10 @@
     background-color: #000;
     color: #fff;
 }
+
+body {
+    overflow-x: hidden;
+}
 /*---------------------------------------------------*/
 /* HEADER */
 .header {
